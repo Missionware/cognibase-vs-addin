@@ -1,4 +1,4 @@
-# Cognibsae Templates and IDE extensions
+# Cognibase Templates and IDE extensions
 This is the repository for the Cognibase templates and Visual Studio extension for templates. 
 
 ## Installation
