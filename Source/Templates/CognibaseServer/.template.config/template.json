@@ -6,7 +6,7 @@
   "description": "A Cognibase server console application that runs the Cognibase Object Server.",
   "identity": "Missiownare.Cognibase.Templates.Server.CSharp",
   "groupIdentity": "Cognibase.Server",
-  "shortName": "server",
+  "shortName": "serverprocess",
   "tags": {
     "language": "C#",
     "type": "project"

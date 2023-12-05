@@ -6,7 +6,7 @@
   "description": "A Cognibase console application ready to be connected to a Cognibase Server.",
   "identity": "Missiownare.Cognibase.Templates.ConsoleApp.CSharp",
   "groupIdentity": "Cognibase.ConsoleApp",
-  "shortName": "console",
+  "shortName": "consoleclient",
   "tags": {
     "language": "C#",
     "type": "project"
