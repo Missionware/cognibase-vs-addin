@@ -1,0 +1,1 @@
+"%~dp0pandoc.exe" -s -o "%~dp0..\VsixSource\CognibaseVsix\EULA.rtf" "%~dp0..\Assets\EULA.md" 

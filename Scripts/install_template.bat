@@ -1,0 +1,1 @@
+dotnet new install "%~dp0..\Output\*.nupkg"

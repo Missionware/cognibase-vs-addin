@@ -1,0 +1,1 @@
+"%~dp0nuget.exe" pack "%~dp0templates.nuspec" -OutputDirectory "%~dp0..\Output"

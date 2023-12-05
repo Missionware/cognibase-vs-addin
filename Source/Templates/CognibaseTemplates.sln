@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CognibaseConsoleApp", "CognibaseConsoleApp\CognibaseConsoleApp.csproj", "{353D2A9F-43BD-4A5C-B356-1E725F39416B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CognibaseDomain", "CognibaseDomain\CognibaseDomain.csproj", "{73C3E59F-F4CD-4C19-AA8F-1B60D4137BB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CognibaseServer", "CognibaseServer\CognibaseServer.csproj", "{A0D7C98E-E1BC-4DB7-9EE3-7E47A4044C09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateItems", "TemplateItems", "{F182A40F-0234-4169-905B-A3A96E551401}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{B47A408B-FB69-467A-A3C5-438A8D0F2B6A}"
+	ProjectSection(SolutionItems) = preProject
+		CognibaseConsoleApp\.template.config\cognibase-logo.png = CognibaseConsoleApp\.template.config\cognibase-logo.png
+		CognibaseConsoleApp\.template.config\ide.host.json = CognibaseConsoleApp\.template.config\ide.host.json
+		CognibaseConsoleApp\.template.config\template.json = CognibaseConsoleApp\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3F6BD379-5D75-41C1-B01F-707429618E93}"
+	ProjectSection(SolutionItems) = preProject
+		CognibaseDomain\.template.config\cognibase-logo.png = CognibaseDomain\.template.config\cognibase-logo.png
+		CognibaseDomain\.template.config\ide.host.json = CognibaseDomain\.template.config\ide.host.json
+		CognibaseDomain\.template.config\template.json = CognibaseDomain\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{83EAAB45-5890-4EA2-A004-23E7C70C6A30}"
+	ProjectSection(SolutionItems) = preProject
+		CognibaseServer\.template.config\cognibase-logo.png = CognibaseServer\.template.config\cognibase-logo.png
+		CognibaseServer\.template.config\ide.host.json = CognibaseServer\.template.config\ide.host.json
+		CognibaseServer\.template.config\template.json = CognibaseServer\.template.config\template.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{353D2A9F-43BD-4A5C-B356-1E725F39416B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353D2A9F-43BD-4A5C-B356-1E725F39416B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353D2A9F-43BD-4A5C-B356-1E725F39416B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353D2A9F-43BD-4A5C-B356-1E725F39416B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C3E59F-F4CD-4C19-AA8F-1B60D4137BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C3E59F-F4CD-4C19-AA8F-1B60D4137BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C3E59F-F4CD-4C19-AA8F-1B60D4137BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C3E59F-F4CD-4C19-AA8F-1B60D4137BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D7C98E-E1BC-4DB7-9EE3-7E47A4044C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D7C98E-E1BC-4DB7-9EE3-7E47A4044C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D7C98E-E1BC-4DB7-9EE3-7E47A4044C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D7C98E-E1BC-4DB7-9EE3-7E47A4044C09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B47A408B-FB69-467A-A3C5-438A8D0F2B6A} = {F182A40F-0234-4169-905B-A3A96E551401}
+		{3F6BD379-5D75-41C1-B01F-707429618E93} = {F182A40F-0234-4169-905B-A3A96E551401}
+		{83EAAB45-5890-4EA2-A004-23E7C70C6A30} = {F182A40F-0234-4169-905B-A3A96E551401}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27357B67-290E-4EE6-B84C-1ACF6FEA9F65}
+	EndGlobalSection
+EndGlobal

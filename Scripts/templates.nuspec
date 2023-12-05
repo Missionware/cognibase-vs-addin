@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Missionware.Cognibase.Templates</id>
+    <version>0.7.6</version>
+    <description>Templates to use when creating a Cognibase application</description>
+    <authors>Missionware</authors>
+    <title>Cognibase .NET Templates</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">EULA.md</license>
+	<readme>docs\readme.md</readme>
+	<icon>images\cognibase-logo.png</icon>
+    <tags>Templates Cognibase Missionware Realtime Platform Framework Distributed Object Enterprise DotNet DotNetCore Core .Net .NetCore</tags>
+    <language>en-US</language>
+	<packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="..\Assets\cognibase-logo.png" target="images\" />
+    <file src="..\Assets\readme.md" target="docs\" />
+    <file src="..\Assets\EULA.md" target="" />
+    <file src="..\Source\Templates\**" exclude="..\Source\Templates\CognibaseTemplates.sln;..\Source\Templates\.vs\**;..\Source\Templates\**\bin\**\*;..\Source\Templates\**\obj\**\*;..\Source\Templates\**\*.user" />
+  </files>
+</package>

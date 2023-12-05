@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="CognibaseTemplates.6f85110a-61d2-4a7b-b8f5-7df9fc49508e" Version="1.0" Language="en-US" Publisher="Missionware" />
+        <DisplayName>Cognibase Visual Stutio Templates</DisplayName>
+        <Description xml:space="preserve">Cognibase .NET project templates to jusmpstart your Cognibase applications.</Description>
+        <MoreInfo>https://www.cognibase.com</MoreInfo>
+        <License>EULA.rtf</License>
+        <GettingStartedGuide>GettingStarted.html</GettingStartedGuide>
+        <Icon>cognibase-logo.png</Icon>
+        <PreviewImage>cognibase-vs-preview.png</PreviewImage>
+
+        <Tags>Templates;Cognibase;Missionware;Realtime;Platform;Framework;Distributed;Object;Enterprise;DotNet</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Templates.pkgdef" />
+    </Assets>
+</PackageManifest>
