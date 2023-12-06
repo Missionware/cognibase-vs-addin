@@ -17,29 +17,45 @@ jobs:
     vsixPath: 'Source/TemplatesVsix/CognibaseTemplates/bin/$(buildConfiguration)/CognibaseTemplates.vsix'
     nupkgName: 'Missionware.Cognibase.Templates'
     nupkgOutput: 'Output'
-    version.Patch: $[counter(variables['version.MajorMinor'], 0)]
-    versionNumber: '$(version.MajorMinor).$(version.Patch)'
+    #version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+    versionNumber: '$(version.MajorMinorPatch)'
     versionNumberWithPrefix: 'CbTemplates_v$(versionNumber)'
     nupkgPathWithVersion: '$(nupkgOutput)/$(nupkgName).$(versionNumber).nupkg'
   
   steps:
-  - task: BatchScript@1
+  - task: PowerShell@2
     inputs:
-      filename: 'Scripts\build_template.bat'
-    displayName: 'build template nupkg'
-
-  - task: BatchScript@1
-    inputs:
-      filename: 'Scripts\vsix_convert_eula_to_rtf.bat'
-    displayName: 'Copy EULA to VSIX '
-
-  - task: BatchScript@1
-    inputs:
-      filename: 'Scripts\vsix_convert_readme_to_html.bat'
-    displayName: 'Copy readme to VSIX'
+      targetType: 'inline'
+      script: |
+        if ([string]::IsNullOrWhitespace(${env:VERSION_MAJORMINORPATCH})) { throw "version.MajorMinorPatch variable not set in pipeline variables. Set it to *.* (eg 1.2)" }
+        Write-Host "##vso[build.updatebuildnumber]TEMPLATES_v$(versionNumber)_$($env:Build_BuildNumber)"
+    displayName: '* Version $(versionNumber) *'
 
   - task: NuGetToolInstaller@1
-    displayName: 'Nuget install'
+    displayName: 'Nuget install'  
+
+  - task: CmdLine@2
+    inputs:
+      script: 'Scripts\build_template.bat $(versionNumber)'
+    displayName: 'build template nupkg'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'Scripts\vsix_convert_eula_to_rtf.bat'
+    displayName: 'Copy EULA to VSIX '
+
+  - task: CmdLine@2
+    inputs:
+      script: 'Scripts\vsix_convert_readme_to_html.bat'
+    displayName: 'Copy readme to VSIX'
+
+  - task: PowerShell@2
+    inputs:
+      filePath: 'fix-versions.ps1'
+      arguments: '$(versionNumber)'
+    displayName: 'Set version in VSIX'
+
+
 
   - task: VSBuild@1
     inputs:
