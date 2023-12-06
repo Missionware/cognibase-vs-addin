@@ -9,7 +9,6 @@
         <GettingStartedGuide>GettingStarted.html</GettingStartedGuide>
         <Icon>cognibase-logo.png</Icon>
         <PreviewImage>cognibase-vs-preview.png</PreviewImage>
-
         <Tags>Templates;Cognibase;Missionware;Realtime;Platform;Framework;Distributed;Object;Enterprise;DotNet</Tags>
     </Metadata>
     <Installation>
