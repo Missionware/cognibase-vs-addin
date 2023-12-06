@@ -100,4 +100,5 @@ jobs:
     inputs:
       filePath: 'Scripts\publish-vsix.ps1'
       arguments: '$(MarketplacePat)'
+    continueOnError: true
     displayName: 'Vsix - Pupblish to marketplace'
