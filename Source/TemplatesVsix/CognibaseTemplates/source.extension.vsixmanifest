@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="CognibaseTemplates.6f85110a-61d2-4a7b-b8f5-7df9fc49508e" Version="1.0" Language="en-US" Publisher="Missionware" />
+        <Identity Id="CognibaseTemplates.6f85110a-61d2-4a7b-b8f5-7df9fc495081" Version="1.0.2" Language="en-US" Publisher="Missionware" />
         <DisplayName>Cognibase Visual Stutio Templates</DisplayName>
         <Description xml:space="preserve">Cognibase .NET project templates to jusmpstart your Cognibase applications.</Description>
         <MoreInfo>https://www.cognibase.com</MoreInfo>
