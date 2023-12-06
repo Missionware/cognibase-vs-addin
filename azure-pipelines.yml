@@ -10,7 +10,7 @@ jobs:
 - job: Default
   timeoutInMinutes: 360
   pool:
-    vmImage: windows-latest
+    vmImage: windows-2019
   variables:
     solution: 'Source/TemplatesVsix/TemplatesVsix.sln'
     buildConfiguration: 'Release'
@@ -38,13 +38,6 @@ jobs:
     inputs:
       script: 'Scripts\build_template.bat $(versionNumber)'
     displayName: 'build template nupkg'
-
-
-  - task: PowerShell@2
-    inputs:
-      targetType: 'inline'
-      script: '.\Scripts\vsix_convert_eula_to_rtf.bat'
-    displayName: 'Copy EULA to VSIX'
 
   - task: CmdLine@2
     inputs:
