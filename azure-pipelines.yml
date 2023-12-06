@@ -39,15 +39,17 @@ jobs:
       script: 'Scripts\build_template.bat $(versionNumber)'
     displayName: 'build template nupkg'
 
+
   - task: PowerShell@2
     inputs:
-      filePath: 'Scripts\vsix_convert_eula_to_rtf.bat'
+      targetType: 'inline'
+      script: '.\Scripts\vsix_convert_eula_to_rtf.bat'
     displayName: 'Copy EULA to VSIX'
 
   - task: CmdLine@2
     inputs:
       script: 'Scripts\vsix_convert_eula_to_rtf.bat'
-    displayName: 'Copy EULA to VSIX '
+    displayName: 'Copy EULA to VSIX'
 
   - task: CmdLine@2
     inputs:
