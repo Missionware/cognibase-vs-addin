@@ -61,11 +61,16 @@ jobs:
       arguments: '$(versionNumber)'
     displayName: 'Set version in VSIX'
 
-
+  - task: NuGetCommand@2
+    inputs:
+      command: 'restore'
+      restoreSolution: $(solution)
+    displayName: 'Nuget restore'
 
   - task: VSBuild@1
     inputs:
       solution: $(solution)
+      configuration: $(buildConfiguration)
     displayName: 'Build VSIX solution'
 
   - task: DotNetCoreCLI@2
