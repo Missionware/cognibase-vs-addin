@@ -1,0 +1,56 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+jobs:
+- job: Default
+  timeoutInMinutes: 360
+  pool:
+    vmImage: windows-latest
+  variables:
+    solution: 'Source/TemplatesVsix/TemplatesVsix.sln'
+    buildConfiguration: 'Release'
+    vsixPath: 'Source/TemplatesVsix/CognibaseTemplates/bin/$(buildConfiguration)/CognibaseTemplates.vsix'
+    nupkgName: 'Missionware.Cognibase.Templates'
+    nupkgOutput: 'Output'
+    version.Patch: $[counter(variables['version.MajorMinor'], 0)]
+    versionNumber: '$(version.MajorMinor).$(version.Patch)'
+    versionNumberWithPrefix: 'CbTemplates_v$(versionNumber)'
+    nupkgPathWithVersion: '$(nupkgOutput)/$(nupkgName).$(versionNumber).nupkg'
+  
+  steps:
+  - task: BatchScript@1
+    inputs:
+      filename: 'Scripts\build_template.bat'
+    displayName: 'build template nupkg'
+
+  - task: BatchScript@1
+    inputs:
+      filename: 'Scripts\vsix_convert_eula_to_rtf.bat'
+    displayName: 'Copy EULA to VSIX '
+
+  - task: BatchScript@1
+    inputs:
+      filename: 'Scripts\vsix_convert_readme_to_html.bat'
+    displayName: 'Copy readme to VSIX'
+
+  - task: NuGetToolInstaller@1
+    displayName: 'Nuget install'
+
+  - task: VSBuild@1
+    inputs:
+      solution: $(solution)
+    displayName: 'Build VSIX solution'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'push'
+      packagesToPush: '$(nupkgPathWithVersion)'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: '9d0932d4-4f72-46fc-a079-0aa8ebef7fd8/1ef3ca01-e917-4c7f-8c59-f68c69d28c58'
+      arguments: '--skip-duplicate'
+    displayName: 'push to Core feed'
