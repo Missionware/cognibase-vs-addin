@@ -17,7 +17,7 @@ $file2Xml = [xml](Get-Content $vxManPath)
 
 # Locate tag
 #$identityNode = $file2Xml.SelectSingleNode("//Identity")
-$identityNode = $file2Xml.SelectSingleNode("//*[@Id='CognibaseTemplates.6f85110a-61d2-4a7b-b8f5-7df9fc49508e']")
+$identityNode = $file2Xml.SelectSingleNode("//*[@Id='CognibaseTemplates.6f85110a-61d2-4a7b-b8f5-7df9fc495081']")
 
 # Overwrite value
 $identityNode.SetAttribute("Version", $version);
