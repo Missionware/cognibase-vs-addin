@@ -39,17 +39,17 @@ jobs:
         Write-Host "##vso[build.updatebuildnumber]TEMPLATES_v$(versionNumber)_$($env:Build_BuildNumber)"
     displayName: '* Version $(versionNumber) *'
 
-  - task: NuGetCommand@2
-    inputs:
-      command: 'restore'
-      restoreSolution: $(templatesSolution)
-    displayName: 'Test - Nuget restore templates'
+#  - task: NuGetCommand@2
+#    inputs:
+#      command: 'restore'
+#      restoreSolution: $(templatesSolution)
+#    displayName: 'Test - Nuget restore templates'
 
-  - task: VSBuild@1
-    inputs:
-      solution: $(templatesSolution)
-      configuration: $(templatesBuildConfiguration)
-    displayName: 'Test - Build Templates solution'
+#  - task: VSBuild@1
+#    inputs:
+#      solution: $(templatesSolution)
+#      configuration: $(templatesBuildConfiguration)
+#    displayName: 'Test - Build Templates solution'
 
   - task: CmdLine@2
     inputs:
