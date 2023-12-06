@@ -14,13 +14,15 @@ jobs:
     vmImage: windows-latest
 
   variables:
-    solution: 'Source/TemplatesVsix/TemplatesVsix.sln'
-    buildConfiguration: 'Release'
+    templatesSolution: 'Source/Templates/CognibaseTemplates.sln'
+    templatesBuildConfiguration: 'Release'
+    vsixSolution: 'Source/TemplatesVsix/TemplatesVsix.sln'
+    vsixBuildConfiguration: 'Release'
     vsixPath: 'Source/TemplatesVsix/CognibaseTemplates/bin/$(buildConfiguration)/CognibaseTemplates.vsix'
     nupkgName: 'Missionware.Cognibase.Templates'
     nupkgOutput: 'Output'
-    #version.Patch: $[counter(variables['version.MajorMinor'], 0)]
-    versionNumber: '$(version.MajorMinorPatch)'
+    version.Patch: $[counter(variables['version.MajorMinor'], 3)]
+    versionNumber: '$(version.MajorMinor).$(version.Patch)'
     versionNumberWithPrefix: 'CbTemplates_v$(versionNumber)'
     nupkgPathWithVersion: '$(nupkgOutput)/$(nupkgName).$(versionNumber).nupkg'
   
@@ -33,45 +35,54 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        if ([string]::IsNullOrWhitespace(${env:VERSION_MAJORMINORPATCH})) { throw "version.MajorMinorPatch variable not set in pipeline variables. Set it to *.* (eg 1.2)" }
+        if ([string]::IsNullOrWhitespace(${env:VERSION_MAJORMINOR})) { throw "version.MajorMinor variable not set in pipeline variables. Set it to *.* (eg 1.2)" }
         Write-Host "##vso[build.updatebuildnumber]TEMPLATES_v$(versionNumber)_$($env:Build_BuildNumber)"
     displayName: '* Version $(versionNumber) *'
 
-  - task: NuGetToolInstaller@1
-    displayName: 'Nuget install'  
+  - task: NuGetCommand@2
+    inputs:
+      command: 'restore'
+      restoreSolution: $(templatesSolution)
+    displayName: 'Test - Nuget restore templates'
+
+  - task: VSBuild@1
+    inputs:
+      solution: $(templatesSolution)
+      configuration: $(templatesBuildConfiguration)
+    displayName: 'Test - Build Templates solution'
 
   - task: CmdLine@2
     inputs:
       script: 'Scripts\build_template.bat $(versionNumber)'
-    displayName: 'build template nupkg'
+    displayName: 'Nupkg - Build template nupkg'
 
   - task: CmdLine@2
     inputs:
       script: 'Scripts\vsix_convert_eula_to_rtf.bat'
-    displayName: 'Copy EULA to VSIX'
+    displayName: 'Vsix - Copy EULA to VSIX'
 
   - task: CmdLine@2
     inputs:
       script: 'Scripts\vsix_convert_readme_to_html.bat'
-    displayName: 'Copy readme to VSIX'
+    displayName: 'Vsix - Copy readme to VSIX'
 
   - task: PowerShell@2
     inputs:
       filePath: 'Scripts\fix-versions.ps1'
       arguments: '$(versionNumber)'
-    displayName: 'Set version in VSIX'
+    displayName: 'Vsix - Set versions'
 
   - task: NuGetCommand@2
     inputs:
       command: 'restore'
-      restoreSolution: $(solution)
-    displayName: 'Nuget restore'
+      restoreSolution: $(vsixSolution)
+    displayName: 'Vsix - Nuget restore solution'
 
   - task: VSBuild@1
     inputs:
-      solution: $(solution)
-      configuration: $(buildConfiguration)
-    displayName: 'Build VSIX solution'
+      solution: $(vsixSolution)
+      configuration: $(vsixBuildConfiguration)
+    displayName: 'Vsix - Build solution'
 
   - task: DotNetCoreCLI@2
     inputs:
@@ -80,4 +91,10 @@ jobs:
       nuGetFeedType: 'internal'
       publishVstsFeed: '9d0932d4-4f72-46fc-a079-0aa8ebef7fd8/1ef3ca01-e917-4c7f-8c59-f68c69d28c58'
       arguments: '--skip-duplicate'
-    displayName: 'push to Core feed'
+    displayName: 'Nupkg - Push to feed'
+
+  - task: PowerShell@2
+    inputs:
+      filePath: 'Scripts\publish-vsix.ps1'
+      arguments: '$(MarketplacePat)'
+    displayName: 'Vsix - Pupblish to marketplace'
