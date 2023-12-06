@@ -18,7 +18,7 @@ jobs:
     nupkgName: 'Missionware.Cognibase.Templates'
     nupkgOutput: 'Output'
     #version.Patch: $[counter(variables['version.MajorMinor'], 0)]
-    versionNumber: '$(version.MajorMinorPath)'
+    versionNumber: '$(version.MajorMinorPatch)'
     versionNumberWithPrefix: 'CbTemplates_v$(versionNumber)'
     nupkgPathWithVersion: '$(nupkgOutput)/$(nupkgName).$(versionNumber).nupkg'
   
