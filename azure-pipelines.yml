@@ -39,6 +39,11 @@ jobs:
       script: 'Scripts\build_template.bat $(versionNumber)'
     displayName: 'build template nupkg'
 
+  - task: PowerShell@2
+    inputs:
+      filePath: 'Scripts\vsix_convert_eula_to_rtf.bat'
+    displayName: 'Copy EULA to VSIX'
+
   - task: CmdLine@2
     inputs:
       script: 'Scripts\vsix_convert_eula_to_rtf.bat'
@@ -51,7 +56,7 @@ jobs:
 
   - task: PowerShell@2
     inputs:
-      filePath: 'fix-versions.ps1'
+      filePath: 'Scripts\fix-versions.ps1'
       arguments: '$(versionNumber)'
     displayName: 'Set version in VSIX'
 
