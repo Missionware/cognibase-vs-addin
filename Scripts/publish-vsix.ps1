@@ -12,6 +12,13 @@ Write-Host $Path
 $VsixPublisher = Join-Path -Path $Path -ChildPath "VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe" -Resolve
 
 Write-Host $VsixPublisher
+Try {
 
-# Publish to VSIX to the marketplace
-& $VsixPublisher publish -payload $VsixPath -publishManifest $ManifestPath -personalAccessToken $PersonalAccessToken -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02,VSIXValidatorWarning08"
+	# Publish to VSIX to the marketplace
+	& $VsixPublisher publish -payload $VsixPath -publishManifest $ManifestPath -personalAccessToken $PersonalAccessToken -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02,VSIXValidatorWarning08"
+}
+Catch {
+    # Logging the error to a file
+    Write-host -f foregroundcolor red "Encountered Error:"$_.Exception.Message
+}
+
