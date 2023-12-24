@@ -81,7 +81,7 @@ public partial class MainWindow : Window
 
         // build the startup helper that contains the auth manager, the auth dialog and the loader
         _startupHelper = new AvaloniaStartupHelper(this, App.Client);
-        _startupHelper.AuthVm = new SimpleAuthDialogVm { DomainFullName = "TestDev", Username = "user1", Password = "user1" };
+        _startupHelper.AuthVm = new SimpleAuthDialogVm { DomainFullName = "Basic", Username = "user1", Password = "user1" };
         _startupHelper.QuitAction = () => Close(); // set the quit action
         _startupHelper.DataLoadAction = () =>
         {
