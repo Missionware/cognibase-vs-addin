@@ -87,18 +87,18 @@ jobs:
       configuration: $(vsixBuildConfiguration)
     displayName: 'Vsix - Build solution'
 
-  - task: DotNetCoreCLI@2
+  - task: NuGetCommand@2
     inputs:
       command: 'push'
       packagesToPush: '$(nupkgPathWithVersion)'
-      nuGetFeedType: 'internal'
-      publishVstsFeed: '9d0932d4-4f72-46fc-a079-0aa8ebef7fd8/1ef3ca01-e917-4c7f-8c59-f68c69d28c58'
+      nuGetFeedType: 'external'
+      publishFeedCredentials: 'MwNugetOrg'
       arguments: '--skip-duplicate'
-    displayName: 'Nupkg - Push to feed'
+    displayName: 'push to Nuget.org'
 
   - task: PowerShell@2
     inputs:
       filePath: 'Scripts\publish-vsix.ps1'
       arguments: '$(MarketplacePat)'
     continueOnError: true
-    displayName: 'Vsix - Pupblish to marketplace'
+    displayName: 'Vsix - Publish to marketplace'
