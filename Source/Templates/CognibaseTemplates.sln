@@ -41,9 +41,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CognibaseAvaloniaDesktopApp
 		CognibaseAvaloniaDesktopApp\.template.config\template.json = CognibaseAvaloniaDesktopApp\.template.config\template.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognibaseWinFormsApp", "CognibaseWinFormsApp\CognibaseWinFormsApp.csproj", "{7AFD8920-1BEA-4D06-907D-B1B522EF2650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CognibaseWinFormsApp", "CognibaseWinFormsApp\CognibaseWinFormsApp.csproj", "{7AFD8920-1BEA-4D06-907D-B1B522EF2650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognibaseWpfApp", "CognibaseWpfApp\CognibaseWpfApp.csproj", "{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CognibaseWpfApp", "CognibaseWpfApp\CognibaseWpfApp.csproj", "{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CognibaseWinFormsApp", "CognibaseWinFormsApp", "{3E559C24-EC7D-4125-876F-056244C49907}"
+	ProjectSection(SolutionItems) = preProject
+		CognibaseWinFormsApp\.template.config\cognibase-logo.png = CognibaseWinFormsApp\.template.config\cognibase-logo.png
+		CognibaseWinFormsApp\.template.config\ide.host.json = CognibaseWinFormsApp\.template.config\ide.host.json
+		CognibaseWinFormsApp\.template.config\template.json = CognibaseWinFormsApp\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CognibaseWpfApp", "CognibaseWpfApp", "{608C305D-AB9E-49AF-A2C9-7861E07C358E}"
+	ProjectSection(SolutionItems) = preProject
+		CognibaseWpfApp\.template.config\cognibase-logo.png = CognibaseWpfApp\.template.config\cognibase-logo.png
+		CognibaseWpfApp\.template.config\ide.host.json = CognibaseWpfApp\.template.config\ide.host.json
+		CognibaseWpfApp\.template.config\template.json = CognibaseWpfApp\.template.config\template.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +98,8 @@ Global
 		{3F6BD379-5D75-41C1-B01F-707429618E93} = {F182A40F-0234-4169-905B-A3A96E551401}
 		{83EAAB45-5890-4EA2-A004-23E7C70C6A30} = {F182A40F-0234-4169-905B-A3A96E551401}
 		{4B72F5A8-EA4F-4A0C-BBDD-A76AE4F93CB5} = {F182A40F-0234-4169-905B-A3A96E551401}
+		{3E559C24-EC7D-4125-876F-056244C49907} = {F182A40F-0234-4169-905B-A3A96E551401}
+		{608C305D-AB9E-49AF-A2C9-7861E07C358E} = {F182A40F-0234-4169-905B-A3A96E551401}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27357B67-290E-4EE6-B84C-1ACF6FEA9F65}

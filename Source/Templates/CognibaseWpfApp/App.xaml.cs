@@ -19,8 +19,6 @@ namespace CognibaseWpfApp
         // On Startup
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-
-
             //
             // WPF APPLICATION BUILDUP
             //
