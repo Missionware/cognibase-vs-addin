@@ -1,14 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
 	  <!--#if NewFrameworkVersion -->
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
 	  <!--#endif -->
+	  <ApplicationIcon>cognibase-logo.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="cognibase-logo.ico" />
+  </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Missionware.Cognibase.Comm.Streaming" Version="0.7.25" />
 		<PackageReference Include="Missionware.Cognibase.AppManagement.Domain" Version="0.7.25" />
@@ -18,15 +23,27 @@
 		<PackageReference Include="Missionware.Cognibase.Security.WindowsOS" Version="0.7.25" />
 		<PackageReference Include="Missionware.Cognibase.Security.LinuxOS" Version="0.7.25" />
 		<PackageReference Include="Missionware.Cognibase.Security" Version="0.7.25" />
-		<PackageReference Include="Missionware.Cognibase.Server.Adapters.Rdbms.SQLite" Version="0.7.25" />
-		<PackageReference Include="Missionware.Cognibase.Server" Version="0.7.25" />
 		<PackageReference Include="Missionware.Cognibase" Version="0.7.25" />
 		<PackageReference Include="Missionware.Serialization" Version="0.7.25" />
 		<PackageReference Include="Missionware.SharedLib.WindowsOS" Version="0.7.25" />
 		<PackageReference Include="Missionware.SharedLib.LinuxOS" Version="0.7.25" />
 		<PackageReference Include="Missionware.SharedLib" Version="0.7.25" />
-		<PackageReference Include="Missionware.Serialization.BinaryFormatterAddin" Version="0.7.25" />
-		<PackageReference Include="Missionware.SharedLib.Logging.SerilogAddin" Version="0.7.25" />
+		<PackageReference Include="Missionware.Cognibase.UI.WinForms" Version="0.7.25" />
+		<PackageReference Include="Missionware.SharedLib.UI" Version="0.7.25" />
+		<PackageReference Include="Missionware.SharedLib.UI.WinForms" Version="0.7.25" />
+		<PackageReference Include="Missionware.Cognibase.UI.Common" Version="0.7.25" />
 	</ItemGroup>
-
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
 </Project>

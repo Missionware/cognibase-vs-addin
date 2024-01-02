@@ -41,6 +41,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CognibaseAvaloniaDesktopApp
 		CognibaseAvaloniaDesktopApp\.template.config\template.json = CognibaseAvaloniaDesktopApp\.template.config\template.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognibaseWinFormsApp", "CognibaseWinFormsApp\CognibaseWinFormsApp.csproj", "{7AFD8920-1BEA-4D06-907D-B1B522EF2650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognibaseWpfApp", "CognibaseWpfApp\CognibaseWpfApp.csproj", "{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{3DD74445-39C5-45D0-A924-72A0C7E2D44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DD74445-39C5-45D0-A924-72A0C7E2D44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DD74445-39C5-45D0-A924-72A0C7E2D44A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AFD8920-1BEA-4D06-907D-B1B522EF2650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AFD8920-1BEA-4D06-907D-B1B522EF2650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AFD8920-1BEA-4D06-907D-B1B522EF2650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AFD8920-1BEA-4D06-907D-B1B522EF2650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8935FE13-42D9-4AB7-82A4-9BA5A5B7928E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
