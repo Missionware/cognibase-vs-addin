@@ -23,7 +23,11 @@ Create project from within Visual Studio
 
 Create project from command line
 
-
+```batch
+dotnet new domainlibrary -o TodoDomain
+dotnet new serverprocess -o TodoServer
+dotnet new consoleclient -o TodoApp
+```
 
 ## Issues and Requests
 
