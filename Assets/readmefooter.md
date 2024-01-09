@@ -21,12 +21,12 @@ Cognibase includes:
 
 # Getting started
 
-- Visit the Cognibase Quick Start to learn how Cognibase helps you build better software systems.
-- Install the Cognibase Visual Studio Extension that includes the Cognibase Project Templates to bootstrap your dev journey.
-- Check out our docs and samples.
+- Visit the [Cognibase Quick Start](https://cognibase.com/docs/quickstart) to learn how Cognibase can help you build better software systems.
+- Install the [Cognibase Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=Missionware.CognibaseTemplatesPackage) that includes the [Cognibase Project Templates](https://www.nuget.org/packages/Missionware.Cognibase.Templates) to bootstrap your dev journey.
+- Check out our [docs](https://cognibase.com/docs) and [samples](https://cognibase.com/docs/samples/todo-sample).
 
 # Support
 
-- Browse our documentation.
-- Reach out to the Cognibase Discussion community.
-- Contact us to discuss your support requirements.
+- Browse our [documentation](https://cognibase.com/docs).
+- Reach out to the Cognibase Discussion community in [Discord](https://discord.gg/kATQxyyESu) and [GitHub](https://github.com/Missionware/cognibase-public).
+- [Contact us](https://cognibase.com/contact) to discuss your support requirements.
