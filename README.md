@@ -24,9 +24,9 @@ Create project from within Visual Studio
 Create project from command line
 
 ```batch
-dotnet new domainlibrary -o TodoDomain
-dotnet new serverprocess -o TodoServer
-dotnet new consoleclient -o TodoApp
+dotnet new cognibasedomain -o TodoDomain
+dotnet new cognibaseserver -o TodoServer
+dotnet new cognibaseavaloniadesktop -o TodoApp
 ```
 
 ## Issues and Requests
