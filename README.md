@@ -5,7 +5,7 @@ This is the repository for the Cognibase templates and Visual Studio extension f
 
 ### Visual Studio Marketplace
 
-Download the VSIX package from Visual Studio Marketplace and install.
+Download the VSIX package from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Missionware.CognibaseTemplatesPackage) and install.
 
 ### Nuget / Command Line
  
