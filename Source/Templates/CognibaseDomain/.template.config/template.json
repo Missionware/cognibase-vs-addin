@@ -6,7 +6,7 @@
   "description": "A Cognibase domain class library project that contains the Realtime Entities (DataItems).",
   "identity": "Missiownare.Cognibase.Templates.Domain.CSharp",
   "groupIdentity": "Cognibase.Domain",
-  "shortName": "domainlibrary",
+  "shortName": "cognibasedomain",
   "tags": {
     "language": "C#",
     "type": "project"

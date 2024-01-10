@@ -2,11 +2,11 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Missionware",
   "classifications": [ "WinForms", "UI", "Desktop" ],
-  "name": "Cognibase WinForms Desktop App",
+  "name": "Cognibase WinForms App",
   "description": "A Cognibase Windows Forms Desktop application ready to be connected to a Cognibase Server.",
   "identity": "Missiownare.Cognibase.Templates.WinFormsApp.CSharp",
-  "groupIdentity": "Cognibase.DesktopApp",
-  "shortName": "winformsapp",
+  "groupIdentity": "Cognibase.WinFormsDesktopApp",
+  "shortName": "cognibasewinformsapp",
   "tags": {
     "language": "C#",
     "type": "project"

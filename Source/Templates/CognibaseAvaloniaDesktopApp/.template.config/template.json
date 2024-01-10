@@ -5,8 +5,8 @@
   "name": "Cognibase Avalonia Desktop App",
   "description": "A Cognibase Avalonia Desktop application ready to be connected to a Cognibase Server.",
   "identity": "Missiownare.Cognibase.Templates.AvaloniaDesktopApp.CSharp",
-  "groupIdentity": "Cognibase.DesktopApp",
-  "shortName": "avaloniadesktopapp",
+  "groupIdentity": "Cognibase.AvaloniaDesktopApp",
+  "shortName": "cognibaseavaloniadesktop",
   "tags": {
     "language": "C#",
     "type": "project"

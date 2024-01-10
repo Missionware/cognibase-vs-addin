@@ -4,10 +4,10 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
 	  <!--#if NewFrameworkVersion -->
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
 	  <!--#endif -->
+	  <UseWindowsForms>true</UseWindowsForms>
 	  <ApplicationIcon>cognibase-logo.ico</ApplicationIcon>
   </PropertyGroup>
 

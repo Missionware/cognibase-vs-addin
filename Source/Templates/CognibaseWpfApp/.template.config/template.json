@@ -5,8 +5,8 @@
   "name": "Cognibase WPF App",
   "description": "A Cognibase WPF application ready to be connected to a Cognibase Server.",
   "identity": "Missiownare.Cognibase.Templates.WpfApp.CSharp",
-  "groupIdentity": "Cognibase.DesktopApp",
-  "shortName": "wpfapp",
+  "groupIdentity": "Cognibase.WpfDesktopApp",
+  "shortName": "cognibasewpfapp",
   "tags": {
     "language": "C#",
     "type": "project"

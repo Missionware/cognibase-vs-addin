@@ -6,8 +6,8 @@
 	  <!--#if NewFrameworkVersion -->
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
 	  <!--#endif -->
+	  <UseWPF>true</UseWPF>
 	  <ApplicationIcon>Images\cognibase-logo.ico</ApplicationIcon>
   </PropertyGroup>
 
