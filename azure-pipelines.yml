@@ -54,10 +54,6 @@ jobs:
 #      configuration: $(templatesBuildConfiguration)
 #    displayName: 'Test - Build Templates solution'
 
-  - task: CmdLine@2
-    inputs:
-      script: 'Scripts\build_template.bat $(versionNumber)'
-    displayName: 'Nupkg - Build template nupkg'
 
   - task: CmdLine@2
     inputs:
@@ -74,6 +70,11 @@ jobs:
       filePath: 'Scripts\fix-versions.ps1'
       arguments: '$(versionNumber)'
     displayName: 'Vsix - Set versions'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'Scripts\build_template.bat $(versionNumber)'
+    displayName: 'Nupkg - Build template nupkg'
 
   - task: NuGetCommand@2
     inputs:
