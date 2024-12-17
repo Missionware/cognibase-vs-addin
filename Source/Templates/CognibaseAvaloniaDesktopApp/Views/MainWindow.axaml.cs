@@ -63,7 +63,7 @@ public partial class MainWindow : Window
         ApplicationManager.MainAppWindow = this;
 
         // Fix for Avalonia
-        ApplicationManager.RegisterApplicationStartingModeProvider(() => { return ApplicationStartMode.Window; });
+        ApplicationManager.RegisterProcessInteractionModeProvider(() => { return  ProcessInteractionMode.Window; });
 
         // set sync context
         App.RegisterMainSynchronizationContext();
@@ -72,7 +72,7 @@ public partial class MainWindow : Window
     protected override void OnClosed(EventArgs e)
     {
         base.OnClosed(e);
-        App.Client.Close();
+        App.Client.CloseConnection();
     }
 
     protected override async void OnOpened(EventArgs e)

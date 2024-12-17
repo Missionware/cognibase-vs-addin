@@ -13,7 +13,7 @@ namespace CognibaseWinFormsApp
 
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
-            App.Client.Close();
+            App.Client.CloseConnection();
             base.OnFormClosed(e);
         }
     }
