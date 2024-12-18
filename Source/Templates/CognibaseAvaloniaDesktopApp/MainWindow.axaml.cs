@@ -19,14 +19,12 @@ public partial class MainWindow : Window
 
     private AvaloniaStartupHelper _startupHelper;
     private readonly AvaloniaDialog _dialog = new();
-    private readonly HomeViewModel _vm;
+
 
 
     public MainWindow()
     {
         InitializeComponent();
-
-        _vm = new HomeViewModel(App.Client, _dialog);
     }
 
     protected override void OnInitialized()
@@ -95,7 +93,7 @@ public partial class MainWindow : Window
             {
                 // set collection in your 
                 //_vm.ListItems = collection;
-                homeView.DataContext = _vm;
+
             });
         };
 
