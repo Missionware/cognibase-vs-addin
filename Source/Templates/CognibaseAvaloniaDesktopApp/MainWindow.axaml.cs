@@ -11,7 +11,7 @@ using Missionware.SharedLib;
 using Missionware.SharedLib.Avalonia;
 using System;
 
-namespace CognibaseAvaloniaDesktopApp.Views;
+namespace CognibaseAvaloniaDesktopApp;
 
 public partial class MainWindow : Window
 {
@@ -19,14 +19,14 @@ public partial class MainWindow : Window
 
     private AvaloniaStartupHelper _startupHelper;
     private readonly AvaloniaDialog _dialog = new();
-    private readonly MainViewModel _vm;
+    private readonly HomeViewModel _vm;
 
 
     public MainWindow()
     {
         InitializeComponent();
 
-        _vm = new MainViewModel(App.Client, _dialog);
+        _vm = new HomeViewModel(App.Client, _dialog);
     }
 
     protected override void OnInitialized()
@@ -95,7 +95,7 @@ public partial class MainWindow : Window
             {
                 // set collection in your 
                 //_vm.ListItems = collection;
-                mainView.DataContext = _vm;
+                homeView.DataContext = _vm;
             });
         };
 

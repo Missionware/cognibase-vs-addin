@@ -6,16 +6,16 @@ using Missionware.SharedLib.UI;
 
 namespace CognibaseAvaloniaDesktopApp.ViewModels;
 
-public class MainViewModel : ViewModelBase
+public class HomeViewModel : ViewModelBase
 {
     IClient _client;
     private readonly IAsyncDialogService _dialogService;
 
     public string Greeting => "Welcome to Cognibase!";
 
-    public MainViewModel() { }
+    public HomeViewModel() { }
 
-    public MainViewModel(IClient client, IAsyncDialogService dialogService)
+    public HomeViewModel(IClient client, IAsyncDialogService dialogService)
     {
         _client = client;
         _dialogService = dialogService;

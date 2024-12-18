@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:CognibaseAvaloniaDesktopApp.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="CognibaseAvaloniaDesktopApp.Views.MainWindow"
+        x:Class="CognibaseAvaloniaDesktopApp.MainWindow"
         Icon="/Assets/cognibase-logo.ico"
         Title="Cognibase App">
-        <views:MainView x:Name="mainView"/>
+        <views:HomeView x:Name="homeView"/>
 </Window>
