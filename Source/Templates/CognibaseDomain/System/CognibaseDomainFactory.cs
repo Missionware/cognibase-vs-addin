@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace CognibaseDomain.System
 {
-    public class DomainFactory: DataItemDomainFactory
+    public class CognibaseDomainFactory: DataItemDomainFactory
     {
         // Return DOMAIN Assembly
         protected override Assembly getFactoryAssembly() { return GetType().Assembly; }
