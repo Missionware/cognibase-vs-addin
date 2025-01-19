@@ -8,7 +8,7 @@
 	  <!--#endif -->
   </PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Missionware.Cognibase" Version="0.8.6" />
-		<PackageReference Include="Missionware.SharedLib" Version="0.8.6" />
+		<PackageReference Include="Missionware.Cognibase" Version="0.8.8" />
+		<PackageReference Include="Missionware.SharedLib" Version="0.8.8" />
 	</ItemGroup>
 </Project>
